@@ -1,0 +1,82 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 1/20/14 11:39 PM
+Description: Ticking entity
+
+java.lang.OutOfMemoryError: Java heap space
+	at go.a(SourceFile:191)
+	at gq.<init>(SourceFile:44)
+	at mp.h(SourceFile:186)
+	at afs.a(SourceFile:1368)
+	at mm.a(SourceFile:480)
+	at afs.g(SourceFile:1346)
+	at afs.h(SourceFile:1253)
+	at mm.h(SourceFile:365)
+	at net.minecraft.server.MinecraftServer.u(SourceFile:510)
+	at lm.u(SourceFile:265)
+	at net.minecraft.server.MinecraftServer.t(SourceFile:440)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:357)
+	at lb.run(SourceFile:616)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at go.a(SourceFile:191)
+	at gq.<init>(SourceFile:44)
+	at mp.h(SourceFile:186)
+	at afs.a(SourceFile:1368)
+	at mm.a(SourceFile:480)
+	at afs.g(SourceFile:1346)
+
+-- Entity being ticked --
+Details:
+	Entity Type: null (mp)
+	Entity ID: 217198
+	Entity Name: RunkmanX
+	Entity's Exact location: 75.43, 67.00, 83.48
+	Entity's Block location: World: (75,67,83), Chunk: (at 11,4,3 in 4,5; contains blocks 64,0,80 to 79,255,95), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+Stacktrace:
+	at afs.h(SourceFile:1253)
+	at mm.h(SourceFile:365)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [mp['RunkmanX'/217198, l='world', x=75.43, y=67.00, z=83.48]]
+	Chunk stats: ServerChunkCache: 535 Drop: 0
+	Level seed: 3038631725382222557
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,0,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.u(SourceFile:510)
+	at lm.u(SourceFile:265)
+	at net.minecraft.server.MinecraftServer.t(SourceFile:440)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:357)
+	at lb.run(SourceFile:616)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.4
+	Operating System: Linux (amd64) version 2.6.18-308.20.1.el5
+	Java Version: 1.7.0_21, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 200536 bytes (0 MB) / 391315456 bytes (373 MB) up to 391315456 bytes (373 MB)
+	JVM Flags: 10 total; -Xms386M -Xmx386M -XX:MaxPermSize=128M -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:+DisableExplicitGC -XX:ErrorFile=/dev/null -XX:UseSSE=3
+	AABB Pool Size: 4932 (276192 bytes; 0 MB) allocated, 2927 (163912 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 431 (24136 bytes; 0 MB) allocated, 385 (21560 bytes; 0 MB) used
+	Player Count: 2 / 12; [mp['MadaNosrebma'/205116, l='world', x=121.38, y=63.00, z=-58.48], mp['RunkmanX'/217198, l='world', x=75.43, y=67.00, z=83.48]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)

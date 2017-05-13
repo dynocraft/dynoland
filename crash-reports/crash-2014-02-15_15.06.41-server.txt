@@ -1,0 +1,81 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 2/15/14 3:06 PM
+Description: Exception generating new chunk
+
+java.lang.OutOfMemoryError: Java heap space
+	at aom.<init>(SourceFile:9)
+	at aoq.<init>(SourceFile:28)
+	at aoo.<init>(SourceFile:111)
+	at apq.d(SourceFile:206)
+	at ml.c(SourceFile:78)
+	at ml.d(SourceFile:108)
+	at afs.e(SourceFile:311)
+	at mm.g(SourceFile:234)
+	at mm.b(SourceFile:137)
+	at net.minecraft.server.MinecraftServer.u(SourceFile:502)
+	at lm.u(SourceFile:265)
+	at net.minecraft.server.MinecraftServer.t(SourceFile:440)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:357)
+	at lb.run(SourceFile:616)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at aom.<init>(SourceFile:9)
+	at aoq.<init>(SourceFile:28)
+	at aoo.<init>(SourceFile:111)
+	at apq.d(SourceFile:206)
+
+-- Chunk to be generated --
+Details:
+	Location: 226,201
+	Position hash: 863288426722
+	Generator: RandomLevelSource
+Stacktrace:
+	at ml.c(SourceFile:78)
+	at ml.d(SourceFile:108)
+	at afs.e(SourceFile:311)
+	at mm.g(SourceFile:234)
+	at mm.b(SourceFile:137)
+
+-- Affected level --
+Details:
+	Level name: world
+	All players: 1 total; [mp['MadaNosrebma'/290, l='world', x=3495.07, y=79.02, z=3088.05]]
+	Chunk stats: ServerChunkCache: 5049 Drop: 0
+	Level seed: 3038631725382222557
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (532,74,158), Chunk: (at 4,4,14 in 33,9; contains blocks 528,0,144 to 543,255,159), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 545530881 game time, 26086390 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 2449 (now: true), thunder time: 41908 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.u(SourceFile:502)
+	at lm.u(SourceFile:265)
+	at net.minecraft.server.MinecraftServer.t(SourceFile:440)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:357)
+	at lb.run(SourceFile:616)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.4
+	Operating System: Linux (amd64) version 2.6.18-308.20.1.el5
+	Java Version: 1.7.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 317136 bytes (0 MB) / 391315456 bytes (373 MB) up to 391315456 bytes (373 MB)
+	JVM Flags: 10 total; -Xms386M -Xmx386M -XX:MaxPermSize=128M -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+UseAdaptiveGCBoundary -XX:-UseGCOverheadLimit -XX:+DisableExplicitGC -XX:ErrorFile=/dev/null -XX:UseSSE=3
+	AABB Pool Size: 5548 (310688 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 536 (30016 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Player Count: 1 / 12; [mp['MadaNosrebma'/290, l='world', x=3495.07, y=79.02, z=3088.05]]
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
